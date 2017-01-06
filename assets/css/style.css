@@ -22,6 +22,9 @@ body{
 #mains a:hover{
 	text-decoration: none;
 }
+#mains a:focused{
+	text-decoration: none;
+}
 #main{
 	width: 100%;
 	height: 100%;
