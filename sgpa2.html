@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SGPA Calculator 3</title>
+	<title>SGPA Calculator 5</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -12,7 +12,7 @@
 <section id="header">
 	<div class="container">
 		<h2>SGPA Calculator</h2>
-		<h5 class="light">For 3<sup>rd</sup>Semester Civil Engineering, SJCE.</h5>
+		<h5 class="light">For 2<sup>nd </sup>Semester Civil Engineering, SJCE.</h5>
 	</div>
 </section>
 	<section id="splash">
@@ -25,7 +25,7 @@
 							<table class="calci-table">
 								<tr>
 									<td>
-										<h4 class="subject-name">Materials of Construction</h4>
+										<h4 class="subject-name">Engg. Chemistry</h4>
 									</td>
 									<td>
 										<select id="sub1Score">
@@ -42,7 +42,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Analysis of Determinate Structure</h4>
+										<h4 class="subject-name">Engg. Chemistry Lab</h4>
 									</td>
 									<td>
 										<select id="sub2Score">
@@ -59,7 +59,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Fundamentals of Surveying</h4>
+										<h4 class="subject-name">CCP</h4>
 									</td>
 									<td>
 										<select id="sub3Score">
@@ -76,7 +76,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Mechanics of Fluid</h4>
+										<h4 class="subject-name">Computer programming lab</h4>
 									</td>
 									<td>
 										<select id="sub4Score">
@@ -93,7 +93,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Concrete Technology</h4>
+										<h4 class="subject-name">Strength of materials</h4>
 									</td>
 									<td>
 										<select id="sub5Score">
@@ -110,7 +110,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Surveying Practice 1</h4>
+										<h4 class="subject-name">Innovation Studies</h4>
 									</td>
 									<td>
 										<select id="sub6Score">
@@ -127,10 +127,27 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Basic Material Testing Lab</h4>
+										<h4 class="subject-name">Kannada</h4>
 									</td>
 									<td>
 										<select id="sub7Score">
+											<option selected value="Select Grade">Grade</option>
+											<option value="10">PP</option>
+											<option value="9">FF</option>
+											<!-- <option value="8">B</option>
+											<option value="7">C</option>
+											<option value="6">D</option>
+											<option value="5">E</option>
+											<option value="0">F</option> -->
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="subject-name">Engg. Mathematics</h4>
+									</td>
+									<td>
+										<select id="sub8Score">
 											<option selected value="Select Grade">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
@@ -144,19 +161,7 @@
 								</tr>
 								<tr>
 									<td>
-										<h4 class="subject-name">Constitution and Professional Ethics</h4>
-									</td>
-									<td>
-										<select id="sub8Score">
-											<option selected value="Select Grade">Grade</option>
-											<option value="10">PP</option>
-											<option value="9">FF</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h4 class="subject-name">Engineering Mathematics</h4>
+										<h4 class="subject-name">Computer aided Engg. drawing</h4>
 									</td>
 									<td>
 										<select id="sub9Score">
@@ -174,7 +179,7 @@
 							</table>
 						</form>
 					</div>
-					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn"><br>
+					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn"></br>
 					<a href="http://bit.ly/chiranth" class="report">Report mis-calculations here</a>
 				</div>
 			</div>
@@ -210,8 +215,8 @@
 			var sub8 = sub8score.options[sub8score.selectedIndex].value;
 			var sub9score = document.getElementById('sub9Score');
 			var sub9 = sub9score.options[sub9score.selectedIndex].value;
-			var total = (sub1*4)+(sub2*4)+(sub3*4)+(sub4*4)+(sub5*4)+(sub6*1.5)+(sub7*1.5)+(sub8*0)+(sub9*4);
-			var gpa = (total/27);
+			var total = (sub1*4)+(sub2*1.5)+(sub3*4)+(sub4*1.5)+(sub5*4)+(sub6*2)+(sub7*0)+(sub8*4)+(sub9*4);
+			var gpa = (total/25);
 			var final = gpa.toFixed(2);
 			alert('Your SGPA is '+final+'');
 		}
