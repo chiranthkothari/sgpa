@@ -19,6 +19,7 @@ body{
 	background-color: black;
 	text-align: center;
 	color: white;
+	padding-bottom: 14px;
 }
 .main-container{
 	width: 100%;
@@ -109,4 +110,5 @@ select{
 .report{
 	color: white;
 	text-decoration: none;
+	margin-bottom: 25px;
 }
