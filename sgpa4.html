@@ -11,7 +11,7 @@
 <body>
 <section id="header">
 	<div class="container">
-		<h2>SGPA Calculator</h2>
+		<a href="index.html" class="home-link"><h2>SGPA Calculator</h2></a>
 		<h5 class="light">For 4<sup>th </sup>Semester Civil Engineering, SJCE.</h5>
 	</div>
 </section>
@@ -179,7 +179,9 @@
 							</table>
 						</form>
 					</div>
-					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn"></br>
+					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn">
+					<h3 id="callResult"></h3>
+					</br>
 					<a href="http://bit.ly/chiranth" class="report">Report mis-calculations here</a>
 				</div>
 			</div>
@@ -218,7 +220,9 @@
 			var total = (sub1*4)+(sub2*4)+(sub3*4)+(sub4*4)+(sub5*4)+(sub6*1.5)+(sub7*1.5)+(sub8*0)+(sub9*4);
 			var gpa = (total/27);
 			var final = gpa.toFixed(2);
-			alert('Your SGPA is '+final+'');
+			var el = document.getElementById('callResult');
+			el.innerHTML = "Your SGPA is "+final;
+			event.preventDefault();
 		}
 	</script>
 
@@ -231,24 +235,6 @@
   ga('create', 'UA-89604320-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1289305267819407',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
