@@ -28,7 +28,7 @@
 									</td>
 									<td>
 										<select id="sub1Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -45,7 +45,7 @@
 									</td>
 									<td>
 										<select id="sub2Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -62,7 +62,7 @@
 									</td>
 									<td>
 										<select id="sub3Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -79,7 +79,7 @@
 									</td>
 									<td>
 										<select id="sub4Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -96,7 +96,7 @@
 									</td>
 									<td>
 										<select id="sub5Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -113,7 +113,7 @@
 									</td>
 									<td>
 										<select id="sub6Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -130,7 +130,7 @@
 									</td>
 									<td>
 										<select id="sub7Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -147,7 +147,7 @@
 									</td>
 									<td>
 										<select id="sub8Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -196,24 +196,27 @@
 			var sub7 = sub7score.options[sub7score.selectedIndex].value;
 			var sub8score = document.getElementById('sub8Score');
 			var sub8 = sub8score.options[sub8score.selectedIndex].value;
-			var total = (sub1*4)+(sub2*4)+(sub3*2)+(sub4*4)+(sub5*4)+(sub6*1.5)+(sub7*4)+(sub8*1.5);
-			var gpa = (total/25);
-			var final = gpa.toFixed(2);
 			var el = document.getElementById('callResult');
-			el.innerHTML = "Your SGPA is "+final;
-			event.preventDefault();
-		}
-	</script>
-	<!-- function(sub1Multipler, sub2...) { -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			if(!sub1 || !sub2 || !sub3 || !sub4 || !sub5 || !sub6 || !sub7 || !sub8){
+				el.innerHTML = "Please Check your values"
+			}
+			else{
+				var total = (sub1*4)+(sub2*4)+(sub3*2)+(sub4*4)+(sub5*4)+(sub6*1.5)+(sub7*4)+(sub8*1.5);
+				var gpa = (total/25);
+				var final = gpa.toFixed(2);
+				el.innerHTML = "Your SGPA is "+final;}
+				event.preventDefault();
+			}
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-89604320-1', 'auto');
-		ga('send', 'pageview');
-	</script>
-	
-</body>
-</html>
+			ga('create', 'UA-89604320-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	</body>
+	</html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SGPA Calculator 3</title>
+	<title>Semester 3</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -29,7 +29,7 @@
 									</td>
 									<td>
 										<select id="sub1Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -46,7 +46,7 @@
 									</td>
 									<td>
 										<select id="sub2Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -63,7 +63,7 @@
 									</td>
 									<td>
 										<select id="sub3Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -80,7 +80,7 @@
 									</td>
 									<td>
 										<select id="sub4Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -97,7 +97,7 @@
 									</td>
 									<td>
 										<select id="sub5Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -114,7 +114,7 @@
 									</td>
 									<td>
 										<select id="sub6Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -131,7 +131,7 @@
 									</td>
 									<td>
 										<select id="sub7Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -148,7 +148,7 @@
 									</td>
 									<td>
 										<select id="sub8Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">PP</option>
 											<option value="9">FF</option>
 										</select>
@@ -160,7 +160,7 @@
 									</td>
 									<td>
 										<select id="sub9Score">
-											<option selected value="Select Grade">Grade</option>
+											<option selected value="">Grade</option>
 											<option value="10">S</option>
 											<option value="9">A</option>
 											<option value="8">B</option>
@@ -211,11 +211,15 @@
 			var sub8 = sub8score.options[sub8score.selectedIndex].value;
 			var sub9score = document.getElementById('sub9Score');
 			var sub9 = sub9score.options[sub9score.selectedIndex].value;
+			var el = document.getElementById('callResult');
+			if(!sub1 || !sub2 || !sub3 || !sub4 || !sub5 || !sub6 || !sub7 || !sub8 || !sub9){
+				el.innerHTML = "Please Check your values"
+			}
+			else{
 			var total = (sub1*4)+(sub2*4)+(sub3*4)+(sub4*4)+(sub5*4)+(sub6*1.5)+(sub7*1.5)+(sub8*0)+(sub9*4);
 			var gpa = (total/27);
 			var final = gpa.toFixed(2);
-			var el = document.getElementById('callResult');
-			el.innerHTML = "Your SGPA is "+final;
+			el.innerHTML = "Your SGPA is "+final;}
 			event.preventDefault();
 		}
 	</script>
