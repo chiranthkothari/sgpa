@@ -11,7 +11,7 @@
 <body>
 	<section id="header">
 		<div class="container">
-			<a href="index.html" class="home-link"><h2>SGPA Calculator</h2></a>
+			<a href="http://bit.do/sgpa" class="home-link"><h2>SGPA Calculator</h2></a>
 			<h5 class="light">For 4<sup>th </sup>Semester Civil Engineering, SJCE.</h5>
 		</div>
 	</section>
@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="main-container">
 				<div class="text-vertical-center">
-					<h1>Select your Grades</h1>
+					<h1 class="no-print">Select your Grades</h1>
 					<div class="grade-select">
 						<form class="calci-form">
 							<table class="calci-table">
@@ -179,10 +179,11 @@
 							</table>
 						</form>
 					</div>
-					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn">
+					<input type="submit" value="Calculate" onclick="calculator()" class="calculate-btn no-print">
+					<input type="submit" value="Print" onclick="myPrint()" class="calculate-btn no-print print-btn">
 					<h3 id="callResult"></h3>
 					<br>
-					<a href="http://bit.ly/chiranth" class="report">Report mis-calculations here</a>
+					<a href="http://bit.ly/chiranth" class="report no-print">Report mis-calculations here</a>
 				</div>
 			</div>
 		</div>
@@ -227,6 +228,9 @@
 				var final = gpa.toFixed(2);
 				el.innerHTML = "Your SGPA is "+final;}
 				event.preventDefault();
+			}
+			function myPrint() {
+				window.print();
 			}
 		</script>
 		<script>
