@@ -122,8 +122,7 @@
 											<option value="6">D</option>
 											<option value="5">E</option>
 											<option value="0">F</option>
-										</select>
-									</td>
+										</select>									</td>
 								</tr>
 							</table>
 						</form>
@@ -166,8 +165,8 @@
 				el.innerHTML = "Please Check your values"
 			}
 			else{
-				var total = (sub1*4)+(sub2*4)+(sub3*4)+(sub4*4)+(sub5*4)+(sub6*1.5);
-				var gpa = (total/21.5);
+				var total = (sub1*4)+(sub2*4)+(sub3*4)+(sub4*4)+(sub5*4)+(sub6*2);
+				var gpa = (total/22);
 				var final = gpa.toFixed(2);
 				el.innerHTML = "Your SGPA is "+final;}
 				event.preventDefault();
